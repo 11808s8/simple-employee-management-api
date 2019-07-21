@@ -1,5 +1,4 @@
 const Cargo = require('../models').Cargo;
-// const Student = require('../models').Student;
 
 module.exports = {
   list(req, res) {
