@@ -9,6 +9,12 @@ const setorController = require('../controllers').setor;
 // });
 
 router.get('/api/cargos', cargoController.list);
+router.get('/api/cargo/:id', cargoController.getById);
+router.put('/api/cargo/:id', cargoController.update);
+router.post('/api/cargo', cargoController.add);
+router.delete('/api/cargo/:id', cargoController.delete);
+
+
 router.get('/api/setores', setorController.list);
 
 module.exports = router;
