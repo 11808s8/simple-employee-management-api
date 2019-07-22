@@ -3,6 +3,7 @@ var router = express.Router();
 const cargoController = require('../controllers').cargo;
 const setorController = require('../controllers').setor;
 const nivelController = require('../controllers').nivel;
+const usuarioController = require('../controllers').usuario;
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
@@ -27,5 +28,10 @@ router.put('/api/nivel/:id', nivelController.update);
 router.post('/api/nivel', nivelController.add);
 router.delete('/api/nivel/:id', nivelController.delete);
 
+router.get('/api/usuarios', usuarioController.list);
+router.get('/api/usuario/:id', usuarioController.getById);
+router.put('/api/usuario/:id', usuarioController.update);
+router.post('/api/usuario', usuarioController.add);
+router.delete('/api/usuario/:id', usuarioController.delete);
 
 module.exports = router;
